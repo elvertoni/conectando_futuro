@@ -1,0 +1,18 @@
+{% if messages %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+  <div class="flex flex-col gap-3">
+    {% for message in messages %}
+    <div class="flex items-start gap-3 px-4 py-3 rounded-xl border text-sm
+                {% if message.tags == 'success' %}
+                  bg-emerald-500/10 border-emerald-500/30 text-emerald-300
+                {% elif message.tags == 'error' %}
+                  bg-red-500/10 border-red-500/30 text-red-400
+                {% else %}
+                  bg-blue-500/10 border-blue-500/30 text-blue-300
+                {% endif %}">
+      {{ message }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

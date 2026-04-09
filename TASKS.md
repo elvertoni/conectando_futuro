@@ -31,21 +31,21 @@ Referência: [`PRD.md`](./PRD.md) — seção 13 (Lista de Tarefas por Sprint).
 
 ### 3.0 Estrutura de Templates
 
-- [ ] **3.1** Criar pasta `templates/` na raiz do projeto
-- [ ] **3.2** Configurar `TEMPLATES['DIRS']` no `settings.py` para apontar para `templates/`
-- [ ] **3.3** Criar `templates/base.html` com estrutura HTML5 completa
-- [ ] **3.4** Criar `templates/partials/navbar.html` com navbar escura e logo
-- [ ] **3.5** Criar `templates/partials/footer.html` com footer simples
-- [ ] **3.6** Criar `templates/partials/messages.html` com renderização das mensagens Django
-- [ ] **3.7** Criar subpastas: `templates/core/`, `templates/accounts/`, `templates/jobs/`, `templates/vocational/`, `templates/resume/`
+- [x] **3.1** Criar pasta `templates/` na raiz do projeto
+- [x] **3.2** Configurar `TEMPLATES['DIRS']` no `settings.py` para apontar para `templates/`
+- [x] **3.3** Criar `templates/base.html` com estrutura HTML5 completa
+- [x] **3.4** Criar `templates/partials/navbar.html` com navbar escura e logo
+- [x] **3.5** Criar `templates/partials/footer.html` com footer simples
+- [x] **3.6** Criar `templates/partials/messages.html` com renderização das mensagens Django
+- [x] **3.7** Criar subpastas: `templates/core/`, `templates/accounts/`, `templates/jobs/`, `templates/vocational/`, `templates/resume/`
 
 ### 4.0 Design System Base
 
-- [ ] **4.1** Configurar TailwindCSS via CDN no `base.html` com bloco `extra_head`
-- [ ] **4.2** Definir `tailwind.config` inline com fonte Inter e cores customizadas
-- [ ] **4.3** Adicionar link do Google Fonts (Inter) no `base.html`
-- [ ] **4.4** Criar `templates/partials/button_primary.html` com include reutilizável
-- [ ] **4.5** Testar design system criando uma página de rascunho com todos os componentes
+- [x] **4.1** Configurar TailwindCSS via CDN no `base.html` com bloco `extra_head`
+- [x] **4.2** Definir `tailwind.config` inline com fonte Inter e cores customizadas
+- [x] **4.3** Adicionar link do Google Fonts (Inter) no `base.html`
+- [x] **4.4** Criar `templates/partials/button_primary.html` com include reutilizável
+- [x] **4.5** Testar design system criando uma página de rascunho com todos os componentes
 
 ---
 

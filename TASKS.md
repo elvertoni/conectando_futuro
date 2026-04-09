@@ -16,18 +16,18 @@ Referência: [`PRD.md`](./PRD.md) — seção 13 (Lista de Tarefas por Sprint).
 - [x] **1.4** Configurar `settings.py` para usar `python-decouple` com arquivo `.env`
 - [x] **1.5** Criar arquivo `.env` com `SECRET_KEY`, `DEBUG=True`, `ALLOWED_HOSTS`
 - [x] **1.6** Criar arquivo `.gitignore` excluindo `.env`, `__pycache__`, `*.pyc`, `db.sqlite3`, `media/`
-- [ ] **1.7** Criar repositório Git e fazer commit inicial
+- [x] **1.7** Criar repositório Git e fazer commit inicial
 
 ### 2.0 Estrutura de Apps
 
-- [ ] **2.1** Criar app `core`: `python manage.py startapp core`
-- [ ] **2.2** Criar app `accounts`: `python manage.py startapp accounts`
-- [ ] **2.3** Criar app `jobs`: `python manage.py startapp jobs`
-- [ ] **2.4** Criar app `vocational`: `python manage.py startapp vocational`
-- [ ] **2.5** Criar app `resume`: `python manage.py startapp resume`
-- [ ] **2.6** Registrar todas as apps em `INSTALLED_APPS` no `settings.py`
-- [ ] **2.7** Criar arquivo `urls.py` em cada app
-- [ ] **2.8** Incluir as urls das apps no `urls.py` principal com `include()`
+- [x] **2.1** Criar app `core`: `python manage.py startapp core`
+- [x] **2.2** Criar app `accounts`: `python manage.py startapp accounts`
+- [x] **2.3** Criar app `jobs`: `python manage.py startapp jobs`
+- [x] **2.4** Criar app `vocational`: `python manage.py startapp vocational`
+- [x] **2.5** Criar app `resume`: `python manage.py startapp resume`
+- [x] **2.6** Registrar todas as apps em `INSTALLED_APPS` no `settings.py`
+- [x] **2.7** Criar arquivo `urls.py` em cada app
+- [x] **2.8** Incluir as urls das apps no `urls.py` principal com `include()`
 
 ### 3.0 Estrutura de Templates
 

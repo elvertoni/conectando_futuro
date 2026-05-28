@@ -1,0 +1,591 @@
+[
+  {
+    "model": "vocational.question",
+    "pk": 1,
+    "fields": {
+      "text": "Qual atividade mais desperta seu interesse no dia a dia?",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 1,
+    "fields": {
+      "question": 1,
+      "text": "Resolver problemas lógicos ou criar pequenos códigos/páginas web.",
+      "value": "Tecnologia",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 2,
+    "fields": {
+      "question": 1,
+      "text": "Organizar tarefas, planejar projetos ou lidar com documentos e planilhas.",
+      "value": "Administração",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 3,
+    "fields": {
+      "question": 1,
+      "text": "Criar layouts, ilustrações, editar imagens ou trabalhar na parte visual.",
+      "value": "Design",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 4,
+    "fields": {
+      "question": 1,
+      "text": "Conversar com pessoas, ajudar com dúvidas ou negociar acordos.",
+      "value": "Atendimento",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "vocational.question",
+    "pk": 2,
+    "fields": {
+      "text": "Em um trabalho em grupo na escola ou comunidade, qual papel você naturalmente assume?",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 5,
+    "fields": {
+      "question": 2,
+      "text": "Aquele que organiza os prazos, define a apresentação e coordena a divisão.",
+      "value": "Administração",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 6,
+    "fields": {
+      "question": 2,
+      "text": "O responsável pelos slides, identidade visual e design geral do material.",
+      "value": "Design",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 7,
+    "fields": {
+      "question": 2,
+      "text": "Aquele que faz a apresentação falada, interage com a banca e expõe com clareza.",
+      "value": "Vendas",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 8,
+    "fields": {
+      "question": 2,
+      "text": "Aquele que desenvolve a parte técnica, pesquisa dados ou cria soluções complexas.",
+      "value": "Tecnologia",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "vocational.question",
+    "pk": 3,
+    "fields": {
+      "text": "Qual tipo de ambiente profissional você considera mais atraente?",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 9,
+    "fields": {
+      "question": 3,
+      "text": "Um escritório focado em gestão, auditorias ou processos estratégicos.",
+      "value": "Administração",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 10,
+    "fields": {
+      "question": 3,
+      "text": "Uma empresa de software, laboratório de inovação ou desenvolvimento de games.",
+      "value": "Tecnologia",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 11,
+    "fields": {
+      "question": 3,
+      "text": "Uma agência criativa, de publicidade ou estúdio de design digital.",
+      "value": "Design",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 12,
+    "fields": {
+      "question": 3,
+      "text": "Um centro de distribuição, armazém, porto ou fluxo de transportes de mercadorias.",
+      "value": "Logística",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "vocational.question",
+    "pk": 4,
+    "fields": {
+      "text": "Se você pudesse liderar um projeto escolar ou comunitário hoje, qual escolheria?",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 13,
+    "fields": {
+      "question": 4,
+      "text": "Desenvolver um app móvel ou site utilitário para a comunidade.",
+      "value": "Tecnologia",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 14,
+    "fields": {
+      "question": 4,
+      "text": "Organizar uma rede de coleta e entrega ágil de suprimentos ou cestas básicas.",
+      "value": "Logística",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 15,
+    "fields": {
+      "question": 4,
+      "text": "Planejar e realizar uma campanha de vendas e arrecadação de fundos.",
+      "value": "Vendas",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 16,
+    "fields": {
+      "question": 4,
+      "text": "Criar a identidade visual do projeto, com banners, logo e posts de redes sociais.",
+      "value": "Design",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "vocational.question",
+    "pk": 5,
+    "fields": {
+      "text": "Que tipo de problema prático você mais gostaria de solucionar?",
+      "order": 5,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 17,
+    "fields": {
+      "question": 5,
+      "text": "Consertar, otimizar ou entender o funcionamento de aparelhos e máquinas de uma fábrica.",
+      "value": "Indústria",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 18,
+    "fields": {
+      "question": 5,
+      "text": "Apoiar pessoas que estão com dificuldades em aprender uma matéria ou conteúdo.",
+      "value": "Educação",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 19,
+    "fields": {
+      "question": 5,
+      "text": "Corrigir bugs em linhas de código ou automatizar processos rotineiros computacionais.",
+      "value": "Tecnologia",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 20,
+    "fields": {
+      "question": 5,
+      "text": "Resolver a desorganização de um estoque físico ou programar entregas otimizadas.",
+      "value": "Logística",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "vocational.question",
+    "pk": 6,
+    "fields": {
+      "text": "Ao estudar ou adquirir uma nova habilidade técnica, qual te gera mais ânimo?",
+      "order": 6,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 21,
+    "fields": {
+      "question": 6,
+      "text": "Aprender sobre manutenção, montagem, circuitos industriais ou robótica prática.",
+      "value": "Indústria",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 22,
+    "fields": {
+      "question": 6,
+      "text": "Compreender teorias de aprendizagem, liderar oficinas educativas ou fazer pedagogia.",
+      "value": "Educação",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 23,
+    "fields": {
+      "question": 6,
+      "text": "Aprender modelagem 3D, tratamento digital de imagens ou edição profissional de vídeos.",
+      "value": "Design",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 24,
+    "fields": {
+      "question": 6,
+      "text": "Analisar demonstrativos contábeis, organizar fluxo de caixa ou estudar economia corporativa.",
+      "value": "Administração",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "vocational.question",
+    "pk": 7,
+    "fields": {
+      "text": "Como você define seu estilo ideal de relacionamento e comunicação com as pessoas?",
+      "order": 7,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 25,
+    "fields": {
+      "question": 7,
+      "text": "Prestativo e atencioso, focando em esclarecer dúvidas e dar suporte de qualidade.",
+      "value": "Atendimento",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 26,
+    "fields": {
+      "question": 7,
+      "text": "Persuasivo e focado em apresentar propostas comerciais vantajosas e vendas.",
+      "value": "Vendas",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 27,
+    "fields": {
+      "question": 7,
+      "text": "Didático, buscando compartilhar explicações, guiar o aprendizado ou treinar pessoas.",
+      "value": "Educação",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 28,
+    "fields": {
+      "question": 7,
+      "text": "Profissional e pragmático, preferindo focar no processo técnico e dados organizados.",
+      "value": "Administração",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "vocational.question",
+    "pk": 8,
+    "fields": {
+      "text": "Quando você pensa em um grande desafio profissional empolgante, você se imagina:",
+      "order": 8,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 29,
+    "fields": {
+      "question": 8,
+      "text": "Garantindo a segurança física e qualidade em uma linha de montagem e metalurgia.",
+      "value": "Indústria",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 30,
+    "fields": {
+      "question": 8,
+      "text": "Negociando metas, fechando parcerias de negócios ou alcançando recordes de vendas.",
+      "value": "Vendas",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 31,
+    "fields": {
+      "question": 8,
+      "text": "Rastreando frotas e garantindo a expedição pontual de milhares de pedidos online.",
+      "value": "Logística",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 32,
+    "fields": {
+      "question": 8,
+      "text": "Lecionando para turmas de estudantes, elaborando dinâmicas e currículos escolares.",
+      "value": "Educação",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "vocational.question",
+    "pk": 9,
+    "fields": {
+      "text": "Caso ganhasse uma bolsa de estudos integral para um curso técnico, qual escolheria?",
+      "order": 9,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 33,
+    "fields": {
+      "question": 9,
+      "text": "Técnico em Desenvolvimento de Sistemas ou Segurança da Informação.",
+      "value": "Tecnologia",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 34,
+    "fields": {
+      "question": 9,
+      "text": "Técnico em Administração ou Secretariado Executivo.",
+      "value": "Administração",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 35,
+    "fields": {
+      "question": 9,
+      "text": "Técnico em Logística, Armazenamento e Cadeia de Suprimentos.",
+      "value": "Logística",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 36,
+    "fields": {
+      "question": 9,
+      "text": "Técnico em Automação Industrial ou Eletromecânica.",
+      "value": "Indústria",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+
+  {
+    "model": "vocational.question",
+    "pk": 10,
+    "fields": {
+      "text": "Qual dessas competências pessoais você mais reconhece em si mesmo?",
+      "order": 10,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 37,
+    "fields": {
+      "question": 10,
+      "text": "Empatia e facilidade em ouvir, acolher e orientar outras pessoas.",
+      "value": "Atendimento",
+      "order": 1,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 38,
+    "fields": {
+      "question": 10,
+      "text": "Comunicação verbal persuasiva, determinação e foco em vendas e metas.",
+      "value": "Vendas",
+      "order": 2,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 39,
+    "fields": {
+      "question": 10,
+      "text": "Pensamento lógico estruturado, atenção a detalhes e facilidade com lógica e exatas.",
+      "value": "Tecnologia",
+      "order": 3,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "vocational.questionoption",
+    "pk": 40,
+    "fields": {
+      "question": 10,
+      "text": "Sensibilidade artística, imaginação fértil e habilidade para inovar esteticamente.",
+      "value": "Design",
+      "order": 4,
+      "created_at": "2026-05-28T00:00:00Z",
+      "updated_at": "2026-05-28T00:00:00Z"
+    }
+  }
+]

@@ -55,53 +55,53 @@ Referência: [`PRD.md`](./PRD.md) — seção 13 (Lista de Tarefas por Sprint).
 
 ### 5.0 Model de Usuário Customizado
 
-- [ ] **5.1** Em `accounts/models.py`, criar `User(AbstractBaseUser, PermissionsMixin)` com campos: `email`, `full_name`, `birth_date`, `city`, `state`, `is_active`, `is_staff`, `created_at`, `updated_at`
-- [ ] **5.2** Criar `UserManager(BaseUserManager)` com métodos `create_user()` e `create_superuser()` usando `email` como campo de identificação
-- [ ] **5.3** Definir `USERNAME_FIELD = 'email'` e `REQUIRED_FIELDS = ['full_name']` no model
-- [ ] **5.4** No `settings.py`, definir `AUTH_USER_MODEL = 'accounts.User'`
-- [ ] **5.5** Gerar e aplicar migrations: `python manage.py makemigrations accounts && python manage.py migrate`
-- [ ] **5.6** Criar superuser de teste: `python manage.py createsuperuser`
+- [x] **5.1** Em `accounts/models.py`, criar `User(AbstractBaseUser, PermissionsMixin)` com campos: `email`, `full_name`, `birth_date`, `city`, `state`, `is_active`, `is_staff`, `created_at`, `updated_at`
+- [x] **5.2** Criar `UserManager(BaseUserManager)` com métodos `create_user()` e `create_superuser()` usando `email` como campo de identificação
+- [x] **5.3** Definir `USERNAME_FIELD = 'email'` e `REQUIRED_FIELDS = ['full_name']` no model
+- [x] **5.4** No `settings.py`, definir `AUTH_USER_MODEL = 'accounts.User'`
+- [x] **5.5** Gerar e aplicar migrations: `python manage.py makemigrations accounts && python manage.py migrate`
+- [x] **5.6** Criar superuser de teste: `python manage.py createsuperuser`
 
 ### 6.0 Autenticação — Backend
 
-- [ ] **6.1** Em `accounts/forms.py`, criar `RegisterForm(forms.ModelForm)` com campos: `full_name`, `email`, `birth_date`, `password1`, `password2`
-- [ ] **6.2** Em `accounts/forms.py`, criar `LoginForm(forms.Form)` com campos: `email`, `password`
-- [ ] **6.3** Em `accounts/views.py`, criar `RegisterView(FormView)` que cria o usuário, faz login automático e redireciona para dashboard
-- [ ] **6.4** Em `accounts/views.py`, criar `LoginView(FormView)` que autentica via `authenticate(email=..., password=...)` e redireciona para dashboard
-- [ ] **6.5** Em `accounts/views.py`, criar `LogoutView(View)` que chama `logout(request)` e redireciona para home
-- [ ] **6.6** Em `accounts/urls.py`, registrar rotas: `/cadastro/`, `/entrar/`, `/sair/`
-- [ ] **6.7** Criar `accounts/backends.py` com `EmailBackend(ModelBackend)` que autentica por e-mail
-- [ ] **6.8** No `settings.py`, definir `AUTHENTICATION_BACKENDS = ['accounts.backends.EmailBackend']`
+- [x] **6.1** Em `accounts/forms.py`, criar `RegisterForm(forms.ModelForm)` com campos: `full_name`, `email`, `birth_date`, `password1`, `password2`
+- [x] **6.2** Em `accounts/forms.py`, criar `LoginForm(forms.Form)` com campos: `email`, `password`
+- [x] **6.3** Em `accounts/views.py`, criar `RegisterView(FormView)` que cria o usuário, faz login automático e redireciona para dashboard
+- [x] **6.4** Em `accounts/views.py`, criar `LoginView(FormView)` que autentica via `authenticate(email=..., password=...)` e redireciona para dashboard
+- [x] **6.5** Em `accounts/views.py`, criar `LogoutView(View)` que chama `logout(request)` e redireciona para home
+- [x] **6.6** Em `accounts/urls.py`, registrar rotas: `/cadastro/`, `/entrar/`, `/sair/`
+- [x] **6.7** Criar `accounts/backends.py` com `EmailBackend(ModelBackend)` que autentica por e-mail
+- [x] **6.8** No `settings.py`, definir `AUTHENTICATION_BACKENDS = ['accounts.backends.EmailBackend']`
 
 ### 7.0 Autenticação — Templates
 
-- [ ] **7.1** Criar `templates/accounts/register.html` com formulário de cadastro seguindo design system
-- [ ] **7.2** Criar `templates/accounts/login.html` com formulário de login seguindo design system
-- [ ] **7.3** Adicionar validação visual de erros por campo nos dois formulários
-- [ ] **7.4** Adicionar link "Já tem conta? Entrar" no cadastro e "Não tem conta? Cadastre-se" no login
-- [ ] **7.5** Testar fluxo completo: cadastro → login → logout
+- [x] **7.1** Criar `templates/accounts/register.html` com formulário de cadastro seguindo design system
+- [x] **7.2** Criar `templates/accounts/login.html` com formulário de login seguindo design system
+- [x] **7.3** Adicionar validação visual de erros por campo nos dois formulários
+- [x] **7.4** Adicionar link "Já tem conta? Entrar" no cadastro e "Não tem conta? Cadastre-se" no login
+- [x] **7.5** Testar fluxo completo: cadastro → login → logout
 
 ### 8.0 Site Público — Landing Page
 
-- [ ] **8.1** Em `core/views.py`, criar `HomeView(TemplateView)` com `template_name = 'core/home.html'`
-- [ ] **8.2** Em `core/urls.py`, registrar rota `/` para `HomeView`
-- [ ] **8.3** Criar `templates/core/home.html` herdando de `base.html`
-- [ ] **8.4** Implementar seção **Hero**: título com gradiente, subtítulo, botões "Cadastre-se" e "Entrar", background `from-violet-900 via-slate-900 to-indigo-900`
-- [ ] **8.5** Implementar seção **Como Funciona**: 3 cards com ícones e descrição dos módulos
-- [ ] **8.6** Implementar seção **Por que usar**: lista de benefícios com ícones check
-- [ ] **8.7** Implementar seção **CTA Final**: fundo gradiente com botão de cadastro
-- [ ] **8.8** Navbar pública com logo e botões "Entrar" / "Cadastre-se"
-- [ ] **8.9** Redirecionar usuários já autenticados de `/` para `/dashboard/`
+- [x] **8.1** Em `core/views.py`, criar `HomeView(TemplateView)` com `template_name = 'core/home.html'`
+- [x] **8.2** Em `core/urls.py`, registrar rota `/` para `HomeView`
+- [x] **8.3** Criar `templates/core/home.html` herdando de `base.html`
+- [x] **8.4** Implementar seção **Hero**: título com gradiente, subtítulo, botões "Cadastre-se" e "Entrar", background `from-violet-900 via-slate-900 to-indigo-900`
+- [x] **8.5** Implementar seção **Como Funciona**: 3 cards com ícones e descrição dos módulos
+- [x] **8.6** Implementar seção **Por que usar**: lista de benefícios com ícones check
+- [x] **8.7** Implementar seção **CTA Final**: fundo gradiente com botão de cadastro
+- [x] **8.8** Navbar pública com logo e botões "Entrar" / "Cadastre-se"
+- [x] **8.9** Redirecionar usuários já autenticados de `/` para `/dashboard/`
 
 ### 9.0 Dashboard Principal
 
-- [ ] **9.1** Usar `LoginRequiredMixin` nativo do Django em todas as views autenticadas
-- [ ] **9.2** Em `core/views.py`, criar `DashboardView(LoginRequiredMixin, TemplateView)` com `template_name = 'core/dashboard.html'`
-- [ ] **9.3** Em `core/urls.py`, registrar rota `/dashboard/`
-- [ ] **9.4** Criar `templates/core/dashboard.html` com navbar autenticada
-- [ ] **9.5** Implementar 3 cards de acesso rápido: Vagas, Vocacional, Currículo — com ícone, título, descrição e botão
-- [ ] **9.6** Implementar card de boas-vindas com nome do usuário
-- [ ] **9.7** Atualizar `navbar.html` para exibir versão autenticada (nome + logout) quando `user.is_authenticated`
+- [x] **9.1** Usar `LoginRequiredMixin` nativo do Django em todas as views autenticadas
+- [x] **9.2** Em `core/views.py`, criar `DashboardView(LoginRequiredMixin, TemplateView)` com `template_name = 'core/dashboard.html'`
+- [x] **9.3** Em `core/urls.py`, registrar rota `/dashboard/`
+- [x] **9.4** Criar `templates/core/dashboard.html` com navbar autenticada
+- [x] **9.5** Implementar 3 cards de acesso rápido: Vagas, Vocacional, Currículo — com ícone, título, descrição e botão
+- [x] **9.6** Implementar card de boas-vindas com nome do usuário
+- [x] **9.7** Atualizar `navbar.html` para exibir versão autenticada (nome + logout) quando `user.is_authenticated`
 
 ---
 
@@ -111,32 +111,32 @@ Referência: [`PRD.md`](./PRD.md) — seção 13 (Lista de Tarefas por Sprint).
 
 ### 10.0 Model de Vagas
 
-- [ ] **10.1** Em `jobs/models.py`, criar `Job(models.Model)` com campos: `title`, `company`, `description`, `job_type` (choices: estagio/aprendiz/primeiro_emprego), `area`, `city`, `state`, `external_link`, `source` (choices: manual/automatico), `is_active`, `expires_at`, `created_at`, `updated_at`
-- [ ] **10.2** Adicionar método `__str__` retornando `f'{self.title} — {self.company}'`
-- [ ] **10.3** Adicionar propriedade `is_expired` verificando se `expires_at` é passado
-- [ ] **10.4** Adicionar Manager customizado `Job.objects.active()` filtrando `is_active=True` e `expires_at > hoje`
-- [ ] **10.5** Gerar e aplicar migrations: `python manage.py makemigrations jobs && python manage.py migrate`
-- [ ] **10.6** Registrar model no `jobs/admin.py` com `list_display`, `list_filter` e `search_fields`
-- [ ] **10.7** Popular banco com 15–20 vagas de teste via fixtures ou pelo Django Admin
+- [x] **10.1** Em `jobs/models.py`, criar `Job(models.Model)` com campos: `title`, `company`, `description`, `job_type` (choices: estagio/aprendiz/primeiro_emprego), `area`, `city`, `state`, `external_link`, `source` (choices: manual/automatico), `is_active`, `expires_at`, `created_at`, `updated_at`
+- [x] **10.2** Adicionar método `__str__` retornando `f'{self.title} — {self.company}'`
+- [x] **10.3** Adicionar propriedade `is_expired` verificando se `expires_at` é passado
+- [x] **10.4** Adicionar Manager customizado `Job.objects.active()` filtrando `is_active=True` e `expires_at > hoje`
+- [x] **10.5** Gerar e aplicar migrations: `python manage.py makemigrations jobs && python manage.py migrate`
+- [x] **10.6** Registrar model no `jobs/admin.py` com `list_display`, `list_filter` e `search_fields`
+- [x] **10.7** Popular banco com 15–20 vagas de teste via fixtures ou pelo Django Admin
 
 ### 11.0 Views de Vagas
 
-- [ ] **11.1** Em `jobs/views.py`, criar `JobListView(LoginRequiredMixin, ListView)` com `model = Job`, `template_name = 'jobs/job_list.html'`, `paginate_by = 12`
-- [ ] **11.2** Sobrescrever `get_queryset()` para aplicar filtros via `request.GET`: `city`, `job_type`, `area`
-- [ ] **11.3** Sobrescrever `get_context_data()` para passar filtros ativos ao template
-- [ ] **11.4** Em `jobs/views.py`, criar `JobDetailView(LoginRequiredMixin, DetailView)` com `model = Job`, `template_name = 'jobs/job_detail.html'`
-- [ ] **11.5** Em `jobs/urls.py`, registrar rotas: `/vagas/` e `/vagas/<int:pk>/`
+- [x] **11.1** Em `jobs/views.py`, criar `JobListView(LoginRequiredMixin, ListView)` com `model = Job`, `template_name = 'jobs/job_list.html'`, `paginate_by = 12`
+- [x] **11.2** Sobrescrever `get_queryset()` para aplicar filtros via `request.GET`: `city`, `job_type`, `area`
+- [x] **11.3** Sobrescrever `get_context_data()` para passar filtros ativos ao template
+- [x] **11.4** Em `jobs/views.py`, criar `JobDetailView(LoginRequiredMixin, DetailView)` com `model = Job`, `template_name = 'jobs/job_detail.html'`
+- [x] **11.5** Em `jobs/urls.py`, registrar rotas: `/vagas/` e `/vagas/<int:pk>/`
 
 ### 12.0 Templates de Vagas
 
-- [ ] **12.1** Criar `templates/jobs/job_list.html` com grid de cards (1/2/3 colunas responsivo)
-- [ ] **12.2** Implementar card de vaga com: título, empresa, cidade, badge de tipo, data, botão "Ver detalhes"
-- [ ] **12.3** Implementar formulário de filtros: selects de cidade, tipo, área + botão aplicar + botão limpar
-- [ ] **12.4** Implementar paginação com botões anterior/próximo e indicador de página
-- [ ] **12.5** Implementar estado vazio: mensagem quando não há vagas no filtro
-- [ ] **12.6** Criar `templates/jobs/job_detail.html` com layout de detalhe completo
-- [ ] **12.7** Exibir no detalhe: título, empresa, tipo (badge), cidade/estado, descrição, botão "Candidatar-se" (`target="_blank"`) e botão "Voltar"
-- [ ] **12.8** Adicionar link "Vagas" na navbar autenticada
+- [x] **12.1** Criar `templates/jobs/job_list.html` com grid de cards (1/2/3 colunas responsivo)
+- [x] **12.2** Implementar card de vaga com: título, empresa, cidade, badge de tipo, data, botão "Ver detalhes"
+- [x] **12.3** Implementar formulário de filtros: selects de cidade, tipo, área + botão aplicar + botão limpar
+- [x] **12.4** Implementar paginação com botões anterior/próximo e indicador de página
+- [x] **12.5** Implementar estado vazio: mensagem quando não há vagas no filtro
+- [x] **12.6** Criar `templates/jobs/job_detail.html` com layout de detalhe completo
+- [x] **12.7** Exibir no detalhe: título, empresa, tipo (badge), cidade/estado, descrição, botão "Candidatar-se" (`target="_blank"`) e botão "Voltar"
+- [x] **12.8** Adicionar link "Vagas" na navbar autenticada
 
 ---
 
@@ -146,34 +146,34 @@ Referência: [`PRD.md`](./PRD.md) — seção 13 (Lista de Tarefas por Sprint).
 
 ### 13.0 Models Vocacional
 
-- [ ] **13.1** Em `vocational/models.py`, criar `Question(models.Model)` com campos: `text`, `order`, `created_at`, `updated_at`
-- [ ] **13.2** Criar `QuestionOption(models.Model)` com campos: `question (FK)`, `text`, `value`, `order`, `created_at`, `updated_at`
-- [ ] **13.3** Criar `VocationalProfile(models.Model)` com campos: `user (OneToOne)`, `answers (JSONField)`, `profile_summary (TextField)`, `suggested_areas (JSONField)`, `recommended_job_types (JSONField)`, `strengths (JSONField)`, `next_steps (TextField)`, `created_at`, `updated_at`
-- [ ] **13.4** Gerar e aplicar migrations
-- [ ] **13.5** Registrar models no `vocational/admin.py`
-- [ ] **13.6** Popular banco com 10 perguntas vocacionais via fixture ou admin
+- [x] **13.1** Em `vocational/models.py`, criar `Question(models.Model)` com campos: `text`, `order`, `created_at`, `updated_at`
+- [x] **13.2** Criar `QuestionOption(models.Model)` com campos: `question (FK)`, `text`, `value`, `order`, `created_at`, `updated_at`
+- [x] **13.3** Criar `VocationalProfile(models.Model)` com campos: `user (OneToOne)`, `answers (JSONField)`, `profile_summary (TextField)`, `suggested_areas (JSONField)`, `recommended_job_types (JSONField)`, `strengths (JSONField)`, `next_steps (TextField)`, `created_at`, `updated_at`
+- [x] **13.4** Gerar e aplicar migrations
+- [x] **13.5** Registrar models no `vocational/admin.py`
+- [x] **13.6** Popular banco com 10 perguntas vocacionais via fixture ou admin
 
 ### 14.0 Views Vocacional
 
-- [ ] **14.1** Em `vocational/views.py`, criar `QuestionnaireView(LoginRequiredMixin, TemplateView)` que carrega todas as perguntas e opções
-- [ ] **14.2** Criar `SubmitAnswersView(LoginRequiredMixin, View)` que recebe `POST` com respostas em JSON e salva em `VocationalProfile.answers`
-- [ ] **14.3** Criar função `analyze_profile(profile_id)` em `vocational/services.py` que monta o prompt e chama a OpenRouter API
-- [ ] **14.4** Implementar parsing da resposta JSON da IA e salvar campos no `VocationalProfile`
-- [ ] **14.5** Implementar fallback: se a API falhar, salvar perfil com análise padrão genérica
-- [ ] **14.6** Criar `VocationalResultView(LoginRequiredMixin, TemplateView)` que exibe o resultado e vagas filtradas pelas `suggested_areas`
-- [ ] **14.7** Em `vocational/urls.py`, registrar rotas: `/vocacional/`, `/vocacional/responder/`, `/vocacional/resultado/`
+- [x] **14.1** Em `vocational/views.py`, criar `QuestionnaireView(LoginRequiredMixin, TemplateView)` que carrega todas as perguntas e opções
+- [x] **14.2** Criar `SubmitAnswersView(LoginRequiredMixin, View)` que recebe `POST` com respostas em JSON e salva em `VocationalProfile.answers`
+- [x] **14.3** Criar função `analyze_profile(profile_id)` em `vocational/services.py` que monta o prompt e chama a OpenRouter API
+- [x] **14.4** Implementar parsing da resposta JSON da IA e salvar campos no `VocationalProfile`
+- [x] **14.5** Implementar fallback: se a API falhar, salvar perfil com análise padrão genérica
+- [x] **14.6** Criar `VocationalResultView(LoginRequiredMixin, TemplateView)` que exibe o resultado e vagas filtradas pelas `suggested_areas`
+- [x] **14.7** Em `vocational/urls.py`, registrar rotas: `/vocational/`, `/vocational/responder/`, `/vocational/resultado/`
 
 ### 15.0 Templates Vocacional
 
-- [ ] **15.1** Criar `templates/vocational/questionnaire.html` com as 10 perguntas
-- [ ] **15.2** Implementar barra de progresso visual ("4 de 10 respondidas")
-- [ ] **15.3** Estilizar opções como cards de seleção com estado ativo (borda gradiente quando selecionado)
-- [ ] **15.4** Criar `templates/vocational/result.html` com layout de resultado
-- [ ] **15.5** Exibir no resultado: resumo do perfil, áreas sugeridas (badges), pontos fortes, próximos passos
-- [ ] **15.6** Exibir grid de vagas filtradas pelas áreas sugeridas (máximo 6 cards)
-- [ ] **15.7** Botão "Refazer questionário" disponível no resultado
-- [ ] **15.8** Adicionar link "Vocacional" na navbar autenticada
-- [ ] **15.9** Atualizar dashboard com card de status vocacional: "Perfil gerado" ou "Fazer teste"
+- [x] **15.1** Criar `templates/vocational/questionnaire.html` com as 10 perguntas
+- [x] **15.2** Implementar barra de progresso visual ("4 de 10 respondidas")
+- [x] **15.3** Estilizar opções como cards de seleção com estado ativo (borda gradiente quando selecionado)
+- [x] **15.4** Criar `templates/vocational/result.html` com layout de resultado
+- [x] **15.5** Exibir no resultado: resumo do perfil, áreas sugeridas (badges), pontos fortes, próximos passos
+- [x] **15.6** Exibir grid de vagas filtradas pelas áreas sugeridas (máximo 6 cards)
+- [x] **15.7** Botão "Refazer questionário" disponível no resultado
+- [x] **15.8** Adicionar link "Vocacional" na navbar autenticada
+- [x] **15.9** Atualizar dashboard com card de status vocacional: "Perfil gerado" ou "Fazer teste"
 
 ---
 
@@ -183,32 +183,32 @@ Referência: [`PRD.md`](./PRD.md) — seção 13 (Lista de Tarefas por Sprint).
 
 ### 16.0 Models de Currículo
 
-- [ ] **16.1** Em `resume/models.py`, criar `Resume(models.Model)` com campos: `user (OneToOne)`, `professional_objective`, `skills (JSONField, default=list)`, `languages (JSONField, default=list)`, `pdf_file (FileField, nullable)`, `version (IntegerField, default=1)`, `created_at`, `updated_at`
-- [ ] **16.2** Criar `Education(models.Model)` com campos: `resume (FK)`, `institution`, `course`, `level` (choices: medio/tecnico/superior), `status` (choices: cursando/concluido), `start_year`, `end_year (nullable)`, `created_at`, `updated_at`
-- [ ] **16.3** Criar `WorkExperience(models.Model)` com campos: `resume (FK)`, `role`, `company`, `description`, `start_date`, `end_date (nullable)`, `created_at`, `updated_at`
-- [ ] **16.4** Gerar e aplicar migrations
-- [ ] **16.5** Registrar models no `resume/admin.py`
+- [x] **16.1** Em `resume/models.py`, criar `Resume(models.Model)` com campos: `user (OneToOne)`, `professional_objective`, `skills (JSONField, default=list)`, `languages (JSONField, default=list)`, `pdf_file (FileField, nullable)`, `version (IntegerField, default=1)`, `created_at`, `updated_at`
+- [x] **16.2** Criar `Education(models.Model)` com campos: `resume (FK)`, `institution`, `course`, `level` (choices: medio/tecnico/superior), `status` (choices: cursando/concluido), `start_year`, `end_year (nullable)`, `created_at`, `updated_at`
+- [x] **16.3** Criar `WorkExperience(models.Model)` com campos: `resume (FK)`, `role`, `company`, `description`, `start_date`, `end_date (nullable)`, `created_at`, `updated_at`
+- [x] **16.4** Gerar e aplicar migrations
+- [x] **16.5** Registrar models no `resume/admin.py`
 
 ### 17.0 Views de Currículo
 
-- [ ] **17.1** Em `resume/forms.py`, criar `ResumeForm(ModelForm)` para campos do `Resume`
-- [ ] **17.2** Criar `EducationForm(ModelForm)` para `Education`
-- [ ] **17.3** Criar `WorkExperienceForm(ModelForm)` para `WorkExperience`
-- [ ] **17.4** Em `resume/views.py`, criar `ResumeWizardView(LoginRequiredMixin, TemplateView)` com formulário completo em seções distintas
-- [ ] **17.5** Criar `ResumeSubmitView(LoginRequiredMixin, View)` que processa `POST`, cria/atualiza `Resume`, `Education` e `WorkExperience`, e dispara geração do PDF
-- [ ] **17.6** Criar função `generate_pdf(resume_id)` em `resume/services.py` que renderiza template HTML e gera PDF via WeasyPrint
-- [ ] **17.7** Salvar PDF em `MEDIA_ROOT/curriculos/{user_id}/curriculo_v{version}.pdf`
-- [ ] **17.8** Criar `ResumeDownloadView(LoginRequiredMixin, View)` que retorna o PDF como `FileResponse`
-- [ ] **17.9** Em `resume/urls.py`, registrar rotas: `/curriculo/`, `/curriculo/salvar/`, `/curriculo/download/`
+- [x] **17.1** Em `resume/forms.py`, criar `ResumeForm(ModelForm)` para campos do `Resume`
+- [x] **17.2** Criar `EducationForm(ModelForm)` para `Education`
+- [x] **17.3** Criar `WorkExperienceForm(ModelForm)` para `WorkExperience`
+- [x] **17.4** Em `resume/views.py`, criar `ResumeWizardView(LoginRequiredMixin, TemplateView)` com formulário completo em seções distintas
+- [x] **17.5** Criar `ResumeSubmitView(LoginRequiredMixin, View)` que processa `POST`, cria/atualiza `Resume`, `Education` e `WorkExperience`, e dispara geração do PDF
+- [x] **17.6** Criar função `generate_pdf(resume_id)` em `resume/services.py` que renderiza template HTML e gera PDF via WeasyPrint
+- [x] **17.7** Salvar PDF em `MEDIA_ROOT/curriculos/{user_id}/curriculo_v{version}.pdf`
+- [x] **17.8** Criar `ResumeDownloadView(LoginRequiredMixin, View)` que retorna o PDF como `FileResponse`
+- [x] **17.9** Em `resume/urls.py`, registrar rotas: `/curriculo/`, `/curriculo/salvar/`, `/curriculo/download/`
 
 ### 18.0 Templates de Currículo
 
-- [ ] **18.1** Criar `templates/resume/resume_form.html` com formulário dividido em seções: Dados Pessoais, Objetivo e Formação, Habilidades e Idiomas, Experiências
-- [ ] **18.2** Implementar navegação entre seções via JavaScript puro (show/hide de divs)
-- [ ] **18.3** Implementar indicador de etapas (step indicator) no topo do formulário
-- [ ] **18.4** Adicionar campos dinâmicos para formação e experiências via JS
-- [ ] **18.5** Criar botão "Gerar currículo" ao final do formulário
-- [ ] **18.6** Criar `templates/resume/resume_download.html` com mensagem de sucesso e botão de download
-- [ ] **18.7** Criar `templates/resume/pdf_template.html` — HTML autônomo para o PDF: layout A4, tipografia limpa, fundo branco
-- [ ] **18.8** Adicionar link "Currículo" na navbar autenticada
-- [ ] **18.9** Atualizar dashboard: card de status do currículo com link de download se já gerado
+- [x] **18.1** Criar `templates/resume/resume_form.html` com formulário dividido em seções: Dados Pessoais, Objetivo e Formação, Habilidades e Idiomas, Experiências
+- [x] **18.2** Implementar navegação entre seções via JavaScript puro (show/hide de divs)
+- [x] **18.3** Implementar indicador de etapas (step indicator) no topo do formulário
+- [x] **18.4** Adicionar campos dinâmicos para formação e experiências via JS
+- [x] **18.5** Criar botão "Gerar currículo" ao final do formulário
+- [x] **18.6** Criar `templates/resume/resume_download.html` com mensagem de sucesso e botão de download
+- [x] **18.7** Criar `templates/resume/pdf_template.html` — HTML autônomo para o PDF: layout A4, tipografia limpa, fundo branco
+- [x] **18.8** Adicionar link "Currículo" na navbar autenticada
+- [x] **18.9** Atualizar dashboard: card de status do currículo com link de download se já gerado

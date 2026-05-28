@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+<!-- placeholder for UX audit -->
+
+{% block title %}Meu Perfil Vocacional — Conectando Futuro{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+  <!-- Header -->
+  <div class="mb-10 text-center md:text-left flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div>
+      <h1 class="text-3xl font-extrabold text-slate-100 tracking-tight">
+        Orientação Vocacional
+      </h1>
+      <p class="mt-2 text-slate-400">
+        Aqui está a análise detalhada do seu perfil e as melhores recomendações para sua carreira.
+      </p>
+    </div>
+    <div>
+      <a href="{% url 'vocational:questionnaire' %}"
+         class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl border border-slate-700 hover:border-amber-500/50 text-slate-300 hover:text-amber-400 font-semibold text-sm bg-slate-900/40 hover:bg-amber-500/5 transition-all duration-200">
+        <svg class="w-4.5 h-4.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3-3 3 3m-3-3v12"/>
+        </svg>
+        Refazer Questionário
+      </a>
+    </div>
+  </div>
+
+  <!-- Bloco Principal do Perfil -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+    
+    <!-- Esquerda: Resumo do Perfil (Spans 2 columns on lg screens) -->
+    <div class="lg:col-span-2 bg-gradient-to-br from-slate-900/60 via-slate-900/80 to-[#1a1410] border border-slate-800/80 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
+      <h2 class="text-xl font-bold text-slate-100 mb-4 flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+        Resumo do Perfil
+      </h2>
+      <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+        {{ profile.profile_summary }}
+      </p>
+
+      <!-- Áreas Sugeridas -->
+      <div class="mb-6">
+        <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Áreas Recomendadas</h3>
+        <div class="flex flex-wrap gap-2">
+          {% for area in profile.suggested_areas %}
+          <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 shadow-sm">
+            {{ area }}
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Tipos de Vagas Sugeridos -->
+      <div>
+        <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Formatos de Trabalho Indicados</h3>
+        <div class="flex flex-wrap gap-2">
+          {% for jt in profile.recommended_job_types %}
+          <span class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700">
+            {% if jt == 'estagio' %}Estágio
+            {% elif jt == 'aprendiz' %}Jovem Aprendiz
+            {% elif jt == 'primeiro_emprego' %}Primeiro Emprego
+            {% else %}{{ jt }}{% endif %}
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Direita: Pontos Fortes & Próximos Passos -->
+    <div class="space-y-6">
+      
+      <!-- Pontos Fortes -->
+      <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6">
+        <h2 class="text-lg font-bold text-slate-100 mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          Pontos Fortes
+        </h2>
+        <ul class="space-y-3">
+          {% for strength in profile.strengths %}
+          <li class="flex items-start gap-2.5 text-sm text-slate-300">
+            <svg class="w-4 h-4 mt-0.5 text-amber-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>{{ strength }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Próximos Passos -->
+      <div class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6">
+        <h2 class="text-lg font-bold text-slate-100 mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          Próximos Passos
+        </h2>
+        <div class="text-sm text-slate-300 leading-relaxed space-y-2">
+          {{ profile.next_steps|linebreaksbr }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Seção de Vagas Recomendadas -->
+  <div class="border-t border-slate-800/80 pt-10">
+    <h2 class="text-2xl font-bold text-slate-100 mb-6 flex items-center gap-2">
+      <svg class="w-6 h-6 text-teal-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+      </svg>
+      Vagas Recomendadas para Você
+    </h2>
+
+    {% if recommended_jobs %}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {% for job in recommended_jobs %}
+          <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 hover:border-teal-500/50 hover:shadow-lg hover:shadow-teal-950/20 transition-all duration-300 flex flex-col h-full group">
+            
+            <div class="flex justify-between items-start gap-4 mb-4">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold 
+                           {% if job.job_type == 'estagio' %}bg-cyan-500/10 text-cyan-400 border border-cyan-500/20
+                           {% elif job.job_type == 'aprendiz' %}bg-amber-500/10 text-amber-400 border border-amber-500/20
+                           {% else %}bg-emerald-500/10 text-emerald-400 border border-emerald-500/20{% endif %}">
+                {{ job.get_job_type_display }}
+              </span>
+              <span class="text-xs text-slate-500">
+                {{ job.created_at|date:"d M" }}
+              </span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-100 group-hover:text-teal-400 transition-colors duration-200 line-clamp-1">
+              {{ job.title }}
+            </h3>
+            <p class="text-sm font-medium text-slate-400 mt-1 line-clamp-1">
+              {{ job.company }}
+            </p>
+
+            <p class="text-xs text-slate-500 mt-4 line-clamp-3 flex-grow">
+              {{ job.description }}
+            </p>
+
+            <div class="mt-6 pt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-teal-500/80" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                {{ job.city }} - {{ job.state }}
+              </span>
+              <span class="font-medium text-slate-500">
+                {{ job.area }}
+              </span>
+            </div>
+
+            <a href="{% url 'jobs:detail' job.pk %}" 
+               class="mt-5 w-full inline-flex items-center justify-center gap-1 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700/80 text-slate-200 hover:text-white text-sm font-semibold border border-slate-700 hover:border-slate-600 transition-all duration-200">
+              Ver detalhes
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="bg-slate-900/40 border border-slate-850 rounded-2xl p-8 text-center mb-8">
+        <p class="text-slate-400 text-sm mb-4">
+          Nenhuma vaga recomendada correspondente às suas áreas sugeridas foi encontrada no momento.
+        </p>
+        <a href="{% url 'jobs:list' %}"
+           class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-500 hover:to-cyan-500 text-white font-semibold text-sm transition-all duration-200">
+          Ver todas as vagas
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+
+</div>
+{% endblock %}

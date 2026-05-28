@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Entrar — Conectando Futuro{% endblock %}
+
+{% block content %}
+<div class="min-h-[80vh] flex items-center justify-center py-12 px-4">
+  <div class="w-full max-w-md">
+
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <h1 class="text-2xl md:text-3xl font-bold text-slate-100">Bem-vindo(a) de volta</h1>
+      <p class="mt-2 text-slate-400 text-sm">Entre com seu e-mail e senha para acessar sua conta.</p>
+    </div>
+
+    <!-- Card do formulário -->
+    <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-8 backdrop-blur-sm">
+      <form method="post" class="space-y-5" novalidate>
+        {% csrf_token %}
+
+        {% for field in form %}
+        <div class="space-y-1.5">
+          <label for="{{ field.id_for_label }}"
+                 class="block text-xs font-medium text-slate-400 uppercase tracking-wider">
+            {{ field.label }}
+          </label>
+          {{ field }}
+          {% if field.errors %}
+          {% for error in field.errors %}
+          <p class="mt-1.5 text-xs text-red-400 flex items-center gap-1">
+            <svg class="w-3 h-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            </svg>
+            {{ error }}
+          </p>
+          {% endfor %}
+          {% endif %}
+        </div>
+        {% endfor %}
+
+        <button type="submit"
+                class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+                       bg-gradient-to-r from-teal-600 to-cyan-600
+                       hover:from-teal-500 hover:to-cyan-500
+                       text-white font-semibold text-sm
+                       shadow-lg shadow-teal-500/25
+                       transition-all duration-200 focus:outline-none
+                       focus:ring-2 focus:ring-teal-500 focus:ring-offset-2
+                       focus:ring-offset-slate-900 mt-2">
+          Entrar
+        </button>
+      </form>
+
+      <div class="mt-6 text-center">
+        <p class="text-sm text-slate-400">
+          Não tem conta?
+          <a href="{% url 'accounts:register' %}" class="text-teal-400 hover:text-teal-300 font-medium transition-colors">
+            Cadastre-se
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,344 @@
+[
+  {
+    "model": "jobs.job",
+    "pk": 1,
+    "fields": {
+      "title": "Jovem Aprendiz - Auxiliar Administrativo",
+      "company": "CIEE Curitiba",
+      "description": "Estamos em busca de jovens dinâmicos e organizados para dar suporte em atividades administrativas gerais, como controle de planilhas, arquivamento de documentos e atendimento telefônico. Excelente oportunidade de inserção no mercado de trabalho com curso profissionalizante do CIEE incluso.",
+      "job_type": "aprendiz",
+      "area": "Administração",
+      "city": "Curitiba",
+      "state": "PR",
+      "external_link": "https://www.cieepr.org.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-12-31",
+      "created_at": "2026-05-27T10:00:00Z",
+      "updated_at": "2026-05-27T10:00:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 2,
+    "fields": {
+      "title": "Jovem Aprendiz - Atendimento e Vendas",
+      "company": "Lojas Americanas",
+      "description": "Auxiliar na organização da loja, reposição de mercadorias nas prateleiras e atendimento inicial aos clientes. Oportunidade para desenvolver habilidades de comunicação e negociação.",
+      "job_type": "aprendiz",
+      "area": "Vendas",
+      "city": "Londrina",
+      "state": "PR",
+      "external_link": "https://carreiras.americanas.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-12-31",
+      "created_at": "2026-05-27T10:05:00Z",
+      "updated_at": "2026-05-27T10:05:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 3,
+    "fields": {
+      "title": "Estágio em Desenvolvimento Web",
+      "company": "SoftPar Tecnologia",
+      "description": "Oportunidade para estudantes de Análise e Desenvolvimento de Sistemas, Engenharia de Software ou Ciência da Computação. O estagiário atuará com desenvolvimento front-end e back-end em projetos Django e React. Necessário conhecimento básico em HTML, CSS e JavaScript.",
+      "job_type": "estagio",
+      "area": "Tecnologia",
+      "city": "Maringá",
+      "state": "PR",
+      "external_link": "https://www.softpar.com.br/vagas",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-11-30",
+      "created_at": "2026-05-27T10:10:00Z",
+      "updated_at": "2026-05-27T10:10:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 4,
+    "fields": {
+      "title": "Estágio em Suporte de Redes",
+      "company": "NetPR Telecom",
+      "description": "Apoio no monitoramento de infraestrutura de rede, atendimento a chamados de suporte técnico de nível 1, configuração de roteadores e switches. Cursando Sistemas de Informação ou Redes de Computadores a partir do 2º período.",
+      "job_type": "estagio",
+      "area": "Tecnologia",
+      "city": "Ponta Grossa",
+      "state": "PR",
+      "external_link": "https://www.netprtelecom.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-10-15",
+      "created_at": "2026-05-27T10:15:00Z",
+      "updated_at": "2026-05-27T10:15:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 5,
+    "fields": {
+      "title": "Auxiliar de Almoxarifado (Primeiro Emprego)",
+      "company": "LogisSul",
+      "description": "Vaga operacional voltada a jovens sem experiência profissional prévia. Responsável pelo recebimento, conferência, estocagem e liberação de mercadorias no almoxarifado. Desejável ensino médio completo e disposição para aprender.",
+      "job_type": "primeiro_emprego",
+      "area": "Logística",
+      "city": "Cascavel",
+      "state": "PR",
+      "external_link": "https://www.logissul.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-08-30",
+      "created_at": "2026-05-27T10:20:00Z",
+      "updated_at": "2026-05-27T10:20:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 6,
+    "fields": {
+      "title": "Jovem Aprendiz - Operação de Logística",
+      "company": "Correios",
+      "description": "Auxiliar na triagem, conferência e organização de correspondências e encomendas na central de distribuição dos Correios em Curitiba. Jornada de 4 horas diárias compatível com os estudos.",
+      "job_type": "aprendiz",
+      "area": "Logística",
+      "city": "Curitiba",
+      "state": "PR",
+      "external_link": "https://www.correios.com.br/trabalhe-conosco",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2027-01-15",
+      "created_at": "2026-05-27T10:25:00Z",
+      "updated_at": "2026-05-27T10:25:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 7,
+    "fields": {
+      "title": "Estágio em Design Gráfico",
+      "company": "Agência Neo",
+      "description": "Criação de peças de comunicação digital, auxílio no desenvolvimento de layouts para redes sociais e apresentações corporativas. Requer domínio básico de Illustrator e Photoshop. Cursando Design Gráfico, Publicidade ou correlatos.",
+      "job_type": "estagio",
+      "area": "Design",
+      "city": "Londrina",
+      "state": "PR",
+      "external_link": "https://www.agencianeo.com",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-09-30",
+      "created_at": "2026-05-27T10:30:00Z",
+      "updated_at": "2026-05-27T10:30:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 8,
+    "fields": {
+      "title": "Assistente de Vendas (Primeiro Emprego)",
+      "company": "Magazine Luiza",
+      "description": "Atendimento receptivo a clientes na loja, esclarecimento de dúvidas sobre produtos, apoio no caixa e na organização do setor de eletrodomésticos. Oferecemos treinamento completo. Ensino médio completo.",
+      "job_type": "primeiro_emprego",
+      "area": "Vendas",
+      "city": "Maringá",
+      "state": "PR",
+      "external_link": "https://carreiras.magalu.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-12-25",
+      "created_at": "2026-05-27T10:35:00Z",
+      "updated_at": "2026-05-27T10:35:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 9,
+    "fields": {
+      "title": "Jovem Aprendiz - Recepção e Cadastro",
+      "company": "Unimed",
+      "description": "Organização do fluxo de fichas médicas, recepção e encaminhamento de clientes e auxílio na digitalização de dados cadastrais no sistema Unimed. Ideal para desenvolver etiqueta profissional e atendimento ao público.",
+      "job_type": "aprendiz",
+      "area": "Atendimento",
+      "city": "Ponta Grossa",
+      "state": "PR",
+      "external_link": "https://www.unimedpg.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-10-31",
+      "created_at": "2026-05-27T10:40:00Z",
+      "updated_at": "2026-05-27T10:40:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 10,
+    "fields": {
+      "title": "Estágio em Administração Financeira",
+      "company": "Banco do Brasil",
+      "description": "Suporte na conciliação bancária, lançamentos em sistemas contábeis internos e elaboração de relatórios gerenciais básicos em planilhas Excel. Cursando Administração, Ciências Contábeis ou Economia a partir do 3º período.",
+      "job_type": "estagio",
+      "area": "Administração",
+      "city": "Curitiba",
+      "state": "PR",
+      "external_link": "https://www.bb.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-11-15",
+      "created_at": "2026-05-27T10:45:00Z",
+      "updated_at": "2026-05-27T10:45:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 11,
+    "fields": {
+      "title": "Auxiliar de Produção (Primeiro Emprego)",
+      "company": "Metalúrgica Sul",
+      "description": "Linha de montagem industrial. Preparação de materiais, alimentação de máquinas operatrizes e checagem visual da qualidade dos componentes acabados. Vaga com plano de carreira interno e treinamento técnico.",
+      "job_type": "primeiro_emprego",
+      "area": "Indústria",
+      "city": "Cascavel",
+      "state": "PR",
+      "external_link": "https://www.metalurgicasul.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-09-15",
+      "created_at": "2026-05-27T10:50:00Z",
+      "updated_at": "2026-05-27T10:50:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 12,
+    "fields": {
+      "title": "Jovem Aprendiz - Suporte de Tecnologia",
+      "company": "Celepar",
+      "description": "Auxiliar no inventário de hardware, formatação e instalação de sistemas operacionais em desktops e assistência a usuários finais da Celepar. Oportunidade perfeita para iniciar na área de infraestrutura de TI.",
+      "job_type": "aprendiz",
+      "area": "Tecnologia",
+      "city": "Curitiba",
+      "state": "PR",
+      "external_link": "https://www.celepar.pr.gov.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-12-15",
+      "created_at": "2026-05-27T10:55:00Z",
+      "updated_at": "2026-05-27T10:55:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 13,
+    "fields": {
+      "title": "Estágio em Marketing Digital",
+      "company": "MediaLab",
+      "description": "Criação e agendamento de campanhas em redes sociais, redação de posts e monitoramento de tráfego orgânico com ferramentas como Google Analytics. Cursando Jornalismo, Marketing ou Relações Públicas.",
+      "job_type": "estagio",
+      "area": "Design",
+      "city": "Curitiba",
+      "state": "PR",
+      "external_link": "https://www.medialab.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-11-30",
+      "created_at": "2026-05-27T11:00:00Z",
+      "updated_at": "2026-05-27T11:00:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 14,
+    "fields": {
+      "title": "Recepcionista (Primeiro Emprego)",
+      "company": "Hotel Bella Vista",
+      "description": "Controle de check-in e check-out, atendimento telefônico, agendamento de reservas no sistema hoteleiro e auxílio com informações locais a hóspedes. Desejável simpatia e boa dicção. Ensino médio completo.",
+      "job_type": "primeiro_emprego",
+      "area": "Atendimento",
+      "city": "Londrina",
+      "state": "PR",
+      "external_link": "https://www.hotelbellavista.com",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-09-01",
+      "created_at": "2026-05-27T11:05:00Z",
+      "updated_at": "2026-05-27T11:05:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 15,
+    "fields": {
+      "title": "Jovem Aprendiz - Almoxarifado",
+      "company": "O Boticário",
+      "description": "Auxiliar na contagem física de estoque de produtos cosméticos, conferência de lotes e suporte no empacotamento para envio às redes de distribuição nacional. Oportunidade excelente no Grupo Boticário.",
+      "job_type": "aprendiz",
+      "area": "Logística",
+      "city": "Pinhais",
+      "state": "PR",
+      "external_link": "https://www.grupooboticario.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2027-01-30",
+      "created_at": "2026-05-27T11:10:00Z",
+      "updated_at": "2026-05-27T11:10:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 16,
+    "fields": {
+      "title": "Estágio em Pedagogia",
+      "company": "Escola Primeiros Passos",
+      "description": "Suporte às professoras de educação infantil nas atividades lúdicas e recreativas de sala de aula, auxílio na elaboração de planos de aula e acompanhamento dos alunos. Cursando Pedagogia a partir do 2º período.",
+      "job_type": "estagio",
+      "area": "Educação",
+      "city": "Maringá",
+      "state": "PR",
+      "external_link": "https://www.primeirospassosmaringa.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-08-30",
+      "created_at": "2026-05-27T11:15:00Z",
+      "updated_at": "2026-05-27T11:15:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 17,
+    "fields": {
+      "title": "Operador de Caixa (Primeiro Emprego)",
+      "company": "Supermercados Muffato",
+      "description": "Atendimento ao cliente na frente de caixa, passagem de compras de supermercado leitoras de códigos, fechamento financeiro do terminal de vendas e recolhimento de moedas. Desejável atenção e agilidade básica.",
+      "job_type": "primeiro_emprego",
+      "area": "Atendimento",
+      "city": "Curitiba",
+      "state": "PR",
+      "external_link": "https://www.supermuffato.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-12-01",
+      "created_at": "2026-05-27T11:20:00Z",
+      "updated_at": "2026-05-27T11:20:00Z"
+    }
+  },
+  {
+    "model": "jobs.job",
+    "pk": 18,
+    "fields": {
+      "title": "Estágio em Engenharia Civil",
+      "company": "EngPar Construtora",
+      "description": "Apoio no acompanhamento diário de cronograma físico de obras residenciais verticais, elaboração de relatórios fotográficos de qualidade e conferência de recebimento de concreto estrutural. Cursando Engenharia Civil a partir do 5º período.",
+      "job_type": "estagio",
+      "area": "Indústria",
+      "city": "Ponta Grossa",
+      "state": "PR",
+      "external_link": "https://www.engparconstrutora.com.br",
+      "source": "manual",
+      "is_active": true,
+      "expires_at": "2026-10-30",
+      "created_at": "2026-05-27T11:25:00Z",
+      "updated_at": "2026-05-27T11:25:00Z"
+    }
+  }
+]

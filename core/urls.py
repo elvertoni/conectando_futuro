@@ -1,8 +1,11 @@
 from django.urls import path
-from .views import DesignDraftView
+
+from .views import DashboardView, DesignDraftView, HomeView
 
 app_name = 'core'
 
 urlpatterns = [
+    path('', HomeView.as_view(), name='home'),
+    path('dashboard/', DashboardView.as_view(), name='dashboard'),
     path('design/', DesignDraftView.as_view(), name='design-draft'),
 ]

@@ -69,9 +69,26 @@ def detect_test_framework(project_path: Path) -> dict:
     # Python project
     if (project_path / "pyproject.toml").exists() or (project_path / "requirements.txt").exists():
         result["type"] = "python"
-        result["framework"] = "pytest"
-        result["cmd"] = ["python", "-m", "pytest", "-v"]
-        result["coverage_cmd"] = ["python", "-m", "pytest", "--cov", "--cov-report=term-missing"]
+        
+        # Check if it's a Django project
+        if (project_path / "manage.py").exists():
+            result["framework"] = "django"
+            python_bin = "python"
+            if (project_path / "venv" / "Scripts" / "python.exe").exists():
+                python_bin = str(project_path / "venv" / "Scripts" / "python.exe")
+            elif (project_path / "venv" / "bin" / "python").exists():
+                python_bin = str(project_path / "venv" / "bin" / "python")
+            result["cmd"] = [python_bin, "manage.py", "test"]
+            result["coverage_cmd"] = [python_bin, "-m", "coverage", "run", "manage.py", "test"]
+        else:
+            result["framework"] = "pytest"
+            python_bin = "python"
+            if (project_path / "venv" / "Scripts" / "python.exe").exists():
+                python_bin = str(project_path / "venv" / "Scripts" / "python.exe")
+            elif (project_path / "venv" / "bin" / "python").exists():
+                python_bin = str(project_path / "venv" / "bin" / "python")
+            result["cmd"] = [python_bin, "-m", "pytest", "-v"]
+            result["coverage_cmd"] = [python_bin, "-m", "pytest", "--cov", "--cov-report=term-missing"]
     
     return result
 
@@ -117,6 +134,7 @@ def run_tests(cmd: list, cwd: Path) -> dict:
             result["tests_run"] = result["tests_passed"] + result["tests_failed"]
         
         # Pytest pattern: "X passed, Y failed"
+        # Pytest pattern: "X passed, Y failed"
         if "pytest" in str(cmd):
             import re
             match = re.search(r'(\d+)\s+passed', output)
@@ -126,6 +144,25 @@ def run_tests(cmd: list, cwd: Path) -> dict:
             if match:
                 result["tests_failed"] = int(match.group(1))
             result["tests_run"] = result["tests_passed"] + result["tests_failed"]
+            
+        # Django pattern: "Ran X tests in Ys"
+        if "manage.py" in str(cmd):
+            import re
+            full_output = (proc.stdout or "") + "\n" + (proc.stderr or "")
+            match = re.search(r'Ran (\d+) test', full_output)
+            if match:
+                result["tests_run"] = int(match.group(1))
+                if "OK" in full_output:
+                    result["tests_passed"] = result["tests_run"]
+                else:
+                    result["tests_failed"] = 0
+                    fail_match = re.search(r'failures=(\d+)', full_output)
+                    if fail_match:
+                        result["tests_failed"] += int(fail_match.group(1))
+                    err_match = re.search(r'errors=(\d+)', full_output)
+                    if err_match:
+                        result["tests_failed"] += int(err_match.group(1))
+                    result["tests_passed"] = result["tests_run"] - result["tests_failed"]
         
     except FileNotFoundError:
         result["error"] = f"Command not found: {cmd[0]}"
@@ -142,7 +179,7 @@ def main():
     with_coverage = "--coverage" in sys.argv
     
     print(f"\n{'='*60}")
-    print(f"[TEST RUNNER] Unified Test Execution")
+    print("[TEST RUNNER] Unified Test Execution")
     print(f"{'='*60}")
     print(f"Project: {project_path}")
     print(f"Coverage: {'enabled' if with_coverage else 'disabled'}")
